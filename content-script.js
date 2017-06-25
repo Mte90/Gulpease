@@ -6,8 +6,10 @@ var textarea = document.querySelectorAll('textarea');
 //  }, true);
 //}
 window.addEventListener("mousedown", evt => {
-  if (evt.target.tagName && evt.target.tagName.toLowerCase() === "textarea") {
-	gulpease(evt.target.textContent);
+  if (evt.button === 2) {
+	if (evt.target.tagName && evt.target.tagName.toLowerCase() === "textarea") {
+	  gulpease(evt.target.textContent);
+	}
   }
 }, true);
 window.addEventListener("keydown", evt => {
@@ -27,7 +29,7 @@ function gulpease(text) {
 	LP += parole[i].length;
   }
   var frasi = text.match(/[\.\:\?\!\;]/g);
-  var nF = frasi.length;
+  var nF = frasi.length || 0;
   var index = Math.round(89 - (10 * LP / nP) + (300 * nF / nP));
   if (index < 40) {
 	index += ' :-(((';
