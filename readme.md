@@ -1,4 +1,4 @@
-#Gulpease Index
+# Gulpease Index
 
 [Gulpease](https://it.wikipedia.org/wiki/Indice_Gulpease) is an Index for the Italian language to understand how much a text is easy to understand with a score.
 
