@@ -1,8 +1,8 @@
 {
 
   "manifest_version": 2,
-  "name": "Gulpease Counter",
-  "description": "Get in the contextmenu the Gulpease index value for your text",
+  "name": "Gulpease Index",
+  "description": "Get in the contextmenu the Gulpease index value for your text!",
   "version": "1.0",
 
   "background": {
