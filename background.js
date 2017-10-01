@@ -1,4 +1,4 @@
-chrome.contextMenus.create({
+browser.contextMenus.create({
   id: "gulpease",
   title: 'Gulpease',
   enabled: true,
@@ -7,7 +7,7 @@ chrome.contextMenus.create({
 
 browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.message === 'gulpeaseUpdateMessage') {
-	chrome.contextMenus.update('gulpease', {
+	browser.contextMenus.update('gulpease', {
 	  'title': 'Gulpease: ' + request.index,
 	  "contexts": ["all"]
 	});
