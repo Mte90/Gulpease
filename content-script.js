@@ -12,7 +12,6 @@ window.addEventListener("keydown", evt => {
 function gulpease(text) {
   // Based on http://digilander.libero.it/RobertoRicci/variabilialeatorie/esperimenti/leggibilita.htm
   var parole = text.split(" ");
-  console.log(text)
   var nP = parole.length;
   var LP = 0;
   for (var i = 0; i < nP; i++) {

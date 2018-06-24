@@ -11,5 +11,8 @@ browser.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	  'title': 'Gulpease: ' + request.index,
 	  "contexts": ["all"]
 	});
+    if(browser.contextMenus.refresh !== 'undefined') {
+        browser.contextMenus.refresh();
+    }
   }
 });
