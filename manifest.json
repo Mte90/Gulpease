@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "Gulpease Index",
   "description": "Get in the contextmenu the Gulpease index value for your text!",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "background": {
     "scripts": ["background.js"]
