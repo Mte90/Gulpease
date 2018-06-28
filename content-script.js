@@ -1,3 +1,8 @@
+if (typeof browser === "undefined") {
+    var background = chrome;
+} else {
+    var background = browser;
+}
 window.addEventListener("mousedown", evt => {
   if (evt.button === 2 && evt.target.tagName !== 'undefined' && evt.target.tagName.toLowerCase() === "textarea") {
         gulpease(evt.target.value);
@@ -29,7 +34,12 @@ function gulpease(text) {
   } else if (index > 81) {
 	index += ' :-)';
   }
-  browser.runtime.sendMessage({
+  if (typeof browser === "undefined") {
+    var contentscript = chrome;
+  } else {
+    var contentscript = browser;
+  }
+  contentscript.runtime.sendMessage({
 	'message': 'gulpeaseUpdateMessage',
 	'index': index
   });
